@@ -52,27 +52,40 @@ GPIO 11 (SCLK)
 GPIO 7 (CE)
 
 <img width="501" height="491" alt="Screenshot 2026-06-22 at 17 05 57" src="https://github.com/user-attachments/assets/816149b9-dcf7-4ba6-8271-aec6153c7e62" />
+
 (image from pinout.xyz)
 
 Depending on if you're connection a Pico directly to the harness with wires, PROTO board or using an adaptor like the Red Robotics board that I've been using the GP pins used with need working out.  For the Red Robitics board and all the examples I've provided use the following pins:
 
+
 Pi - Pico
+
 GPIO 2 - GP20
+
 GPIO 3 - GP21
 
 GPIO 10 - GP3
+
 GPIO 9 - GP4
+
 GPIO 11 - GP2
+
 GPIO 7 - GP19
+
 
 Boards like the Hard Stuff Pico to Pi Hat uses the following pinout:
 Pi - Pico
+
 GPIO 2 - GP2
+
 GPIO 3 - GP3
 
 GPIO 10 - GP11
+
 GPIO 9 - GP12
+
 GPIO 11 - GP10
+
 GPIO 7 - GP7
 
 (please check you configuation & pins before connecting a Pico to the Hub).
