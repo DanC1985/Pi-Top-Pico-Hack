@@ -6,7 +6,7 @@ The Pico will be connected to the Hub's GPIO and used to both trick the Hub to t
 
 To get these readings I plan to add a OLED display to the Pico to display battery info and screen brightness, and for screen brightness add a few buttons.
 
-Current for the buttons, I'm using the Adafruit NEoKey Socket Breakout for CHOC key switches, and have found these amazing examples on GitHub to use both the switches and NeoPixels via MicroPython:
+Currently for the buttons, I'm using the Adafruit NeoKey Socket Breakout for CHOC key switches, and have found these amazing examples on GitHub to use both the switches and NeoPixels via MicroPython:
 https://github.com/blaz-r/pi_pico_neopixel/tree/main
 https://github.com/ubidefeo/MicroPython-Button/blob/main/README.md
 
