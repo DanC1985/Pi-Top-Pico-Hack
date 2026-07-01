@@ -96,3 +96,22 @@ GPIO 11 - GP10
 GPIO 7 - GP7
 
 (please check you configuation & pins before connecting a Pico to the Hub).
+
+## Code versions:
+
+All codes were written for using the Pico 2 Pi adaptor from Red Robotics - if using a different adaptor then the GP pins will need changing to match your setup.  if wiring the Pico directly to the Hub I would recommend using the same pins as the examples as this is confirmed to work.
+
+There are a few different scripts for testing your setup and different additions.
+
+Good place to start would be 'battery_i2c' that will report back the battery levels on the Pi-Top and 'pi-top_screen_test.py'; this one is a simple test to see if you wiring is correct between the Pico & the Hub - the script will simply adjust the brightness throught 0% - 100%.
+
+From there, 'pi-top_screen_buttons.py' adds two buttons for cotrolling the Brightness yourself - these are the NeoKey PCB that are used for Brightness Up & Down, plus adds LED feedback via the two NeoPixels on the NeoKey - White on both for normal operations, Red on the Brightness Down when the brightness is set to 0% and Green on the Brightness Up when the brightness is set to 100%.  Please note: You will need to add 'Neopixel.py' from the link above for this script to work.
+
+'pi-top_oled.py' adds a OLED display (Waveshare 2.42" OLED set to I2C).  This too will need the 'neopixel.py' to work.  This screen will need both the i2c pins connected (SDA & SCL), but also the 'DC' pin (quirk of this model of screen).  This example keeps the same two button setup as before, but now includes information on the OLED like Battery level, current screen brightness, dharging status & temperture of the battery.
+
+The final version - 'pi-top_screen_v1.py' is a revised version of the 'pi-top_oled.py' to include 4 NeoKey buttons.
+These buttons control the following: 1. Brightness Up, 2. Brightness down, 3. Screen backlight Off / Screen On and 4. Toggling to a second page on the OLED for more status / debugging.
+
+This was a real fun project to work out and get working - here's a nearly finished setup with 4 NeoKeys buttons soldered to a Pi-Top PROTO board, that's then connected to the Hub; just need to find somewhere to mount the screen...
+
+<img width="1024" height="768" alt="134EAFF0-462F-4BEE-9269-F7C2524034C1_1_105_c" src="https://github.com/user-attachments/assets/042e4bd8-3365-4e2b-9e70-14a40ca845fa" />
